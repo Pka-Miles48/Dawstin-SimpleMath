@@ -13,24 +13,33 @@ namespace CPW211_UnitTestStarterCode
     * ***************************************************************************/
     public static class SimpleMath
     {
-        public static double Add(double a, double b)
+        public static double Add(double firstNumber, double secondNumber)
         {
-            throw new NotImplementedException();
+            // Adding two numbers and returning the result
+            return firstNumber + secondNumber;
         }
 
-        public static double Subtract(double a, double b)
+        public static double Subtract(double minuend, double subtrahend)
         {
-            throw new NotImplementedException();
+            // Subtracting the second number from the first and returning the result
+            return minuend - subtrahend;
         }
 
-        public static double Multiply(double a, double b)
+        public static double Multiply(double multiplicand, double multiplier)
         {
-            throw new NotImplementedException();
+            // Multiplying two numbers and returning the product
+            return multiplicand * multiplier;
         }
 
-        public static double Divide(double a, double b)
+        public static double Divide(double dividend, double divisor)
         {
-            throw new NotImplementedException();
+            // Checking if the divisor is zero to prevent division by zero
+            if (divisor == 0)
+            {
+                throw new DivideByZeroException("Cannot divide by zero.");
+            }
+            // Dividing the first number by the second and returning the quotient
+            return dividend / divisor;
         }
     }
 }
